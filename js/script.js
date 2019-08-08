@@ -19,6 +19,10 @@ function loadData() {
 
   $greeting.text(`So, you want to live at ${address}?`);
 
+  // load streetview
+  const streetviewUrl = 'https://cdn.pixabay.com/photo/2019/08/02/11/08/japan-4379452_1280.jpg';
+  $body.append(`<img class="bgimg" src="${streetviewUrl}">`);
+
   // load nytimes
   const nytimesUrl = `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${cityStr}&sort=newest&api-key=7vzH5AwW66mGFFZrXo68um2QcC02ywTA`;
   $.getJSON(nytimesUrl, (data) => {
